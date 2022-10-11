@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8"  />
+        <meta http-equiv="X-UA-compatiable"  content="IE=edge"   />
+        <title>Simple Calculator</title>
+    </head>
+    <style>
+        body  {
+            display:  flex;
+            justify-content: center;
+            margin-top: 80px;
+            background-color: #000;
+        }
+
+        /* using id selector */
+        .container {
+            border: 5px solid white;
+            padding: 10px;
+            background-color: #fff;
+            padding: 30px;
+        }
+
+        /* using class selector */
+        /* when we hover  on input element,below style changes mouse cursor from arrow to hand icon*/
+        .change-cursor {
+            cursor: pointer;
+        }
+        input {
+            padding: 10px 16px;
+            font-size: 18px;
+            margin: 10px 0px;
+        }
+        </style>
+        <body>
+            <div class="container">
+                <form name="f rmadd">
+                    Num1  <input type="text" name="txt1"  /><br  />
+                    Num2  <input type="text" name="txt2" /><br  />
+                    Result <input type="text"name="txt3"  /><br  />
+
+                    <input type="button"  value="+"  name="but1"  onClick="addNum()"  />
+                    <input type="button"  value="-"  name="but2"  onClick="subNum()"  />
+                    <input type="button"  value="X"  name="but3"  onClick="mulNum()"  />
+                     <input type="button"  value="/"  name="but4"  onClick="divNum()"  />
+                    
+                </form>
+            </div>
+            <script language="javaScript">
+                function  addNum()  {
+                    num1 =parseInt(document.frmadd.txt1.value);
+                    num2 =parseInt(document.frmadd.txt2.value);
+                    num3 = num1  + num2;
+                    document.frmadd.txt3.value = num3;
+                }
+                function subNum()    {
+                    num1 =parseInt(document.frmadd.txt1.value);
+                    num2 =parseInt(document.frmadd.txt2.value);
+                    num3 = num1  - num2;
+                    document.frmadd.txt3.value = num3;
+                }
+                function mulNum()     {
+                    num1 =parseInt(document.frmadd.txt1.value);
+                    num2 =parseInt(document.frmadd.txt2.value);
+                    num3 = num1  *  num2;
+                    document.frmadd.txt3.value = num3;
+                }
+                function divNUm()      {
+                    num1 =parseInt(document.frmadd.txt1.value);
+                    num2 =parseInt(document.frmadd.txt2.value);
+                    num3 = num1  /  num2;
+                    document.frmadd.txt3.value = num3;
+                }
+                </script>
+                </body>
+                </html>
